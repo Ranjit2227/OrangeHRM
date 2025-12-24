@@ -2,8 +2,6 @@ from Pages.PimPage import PIMPage
 from Pages.LoginPage import LoginPage
 from Utilities.config_reader import get_username,get_password
 
-
-
 def test_add_employee(setup):
     driver= setup
 
@@ -12,7 +10,7 @@ def test_add_employee(setup):
 
     pim= PIMPage(driver)
     pim.open_add_employee()
-    pim.add_employee("Ranjit","Pandurange","Dhanwade")
+    pim.add_employee("jack","jacob","jones")
 
     person_text= pim.get_person_text()
     assert person_text == "Personal Details"
