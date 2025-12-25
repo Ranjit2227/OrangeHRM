@@ -24,3 +24,6 @@ class BasePage:
     def get_title(self):
         return self.driver.title
 
+    def wait_for_visibility(self,locator):
+        return self.wait.until(EC.visibility_of_element_located(locator))
+
